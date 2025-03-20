@@ -22,7 +22,7 @@ class App {
                             int randomNumber = generateRandomNumber();
                             // System.out.println("Random number: " + randomNumber);
 
-                            while (trials < 3) {
+                            while (trials < 10) {
                                 try {
                                     System.out.print("Enter your guess: ");
                                     int guess = scanner.nextInt();
@@ -46,7 +46,7 @@ class App {
                                     scanner.nextLine();
                                 }
 
-                                if (trials == 3) {
+                                if (trials == 10) {
                                     System.out.println("You have exhausted all your trials. The correct number was: "
                                             + randomNumber + "\n");
                                 }
