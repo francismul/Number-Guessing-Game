@@ -1,5 +1,5 @@
+import java.security.SecureRandom;
 import java.util.InputMismatchException;
-import java.util.Random;
 import java.util.Scanner;
 
 class App {
@@ -22,7 +22,7 @@ class App {
                             int randomNumber = generateRandomNumber();
                             // System.out.println("Random number: " + randomNumber);
 
-                            while (trials < 10) {
+                            while (trials < 5) {
                                 try {
                                     System.out.print("Enter your guess: ");
                                     int guess = scanner.nextInt();
@@ -46,7 +46,7 @@ class App {
                                     scanner.nextLine();
                                 }
 
-                                if (trials == 10) {
+                                if (trials == 5) {
                                     System.out.println("You have exhausted all your trials. The correct number was: "
                                             + randomNumber + "\n");
                                 }
@@ -75,6 +75,6 @@ class App {
     }
 
     public static int generateRandomNumber() {
-        return new Random().nextInt(100) + 1;
+        return new SecureRandom().nextInt(100) + 1;
     }
 }
